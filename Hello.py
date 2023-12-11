@@ -460,8 +460,12 @@ elif page == pages[5] :
     
 elif page == pages[6] :
     st.write("## **Conclusion et perspective**")
-    st.write("Le projet consacré à l'analyse du trafic cycliste à Paris, basé sur les données issues de compteurs vélo, a permis une compréhension approfondie de la dynamique du cyclisme urbain. L'étude a révélé des tendances significatives, telles que les pics de trafic aux heures de pointe et les variations saisonnières, ainsi que l'influence des facteurs météorologiques et des événements spéciaux sur l'affluence cycliste.")
-    st.write("La visualisation et l'analyse des données ont fourni des informations précieuses sur les zones à forte et faible fréquentation cycliste, offrant ainsi des orientations pour l'amélioration des infrastructures cyclables. L'identification de ces zones a permis de proposer des améliorations ciblées pour encourager le cyclisme dans les zones moins fréquentées et optimiser l'expérience des cyclistes dans les zones à forte affluence.")
-    st.write("Le modèle SARIMA, bien qu'efficace pour capturer les motifs saisonniers, a révélé la nécessité d'explorer des approches hybrides pour une meilleure prédiction. La régularité dans l'évaluation des performances du modèle est recommandée pour s'assurer que les prédictions restent précises et pertinentes.")
-    st.write("En somme, ce projet a non seulement contribué à une meilleure compréhension du trafic cycliste à Paris mais a également offert des pistes concrètes pour l'amélioration continue des infrastructures cyclables, s'alignant avec les objectifs de développement durable et de mobilité douce de la ville.")
-    
+    st.write(
+        """
+- **Compréhension approfondie de la dynamique du cyclisme urbain**.
+- **Tendances significatives** : les pics de trafic aux heures de pointe,  les variations saisonnières, l’impact des facteurs météorologiques, des congés et des événements spéciaux.
+- **Géolocalisation des zones à forte et faible fréquentation cycliste**.
+- **Modélisation** : efficacité du modèle SARIMA pour les motifs saisonniers mais nécessité d’une évaluation régulière des performances du modèle pour des prédictions précises et pertinentes.
+- **Propositions d'améliorations concrètes** : encourager le cyclisme dans les zones moins fréquentées, optimiser l'expérience des cyclistes dans les zones à forte affluence, et améliorer les infrastructures.
+"""
+    )
