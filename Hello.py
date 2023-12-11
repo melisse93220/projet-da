@@ -467,5 +467,7 @@ elif page == pages[6] :
 - **Géolocalisation des zones à forte et faible fréquentation cycliste**.
 - **Modélisation** : efficacité du modèle SARIMA pour les motifs saisonniers mais nécessité d’une évaluation régulière des performances du modèle pour des prédictions précises et pertinentes.
 - **Propositions d'améliorations concrètes** : encourager le cyclisme dans les zones moins fréquentées, optimiser l'expérience des cyclistes dans les zones à forte affluence, et améliorer les infrastructures.
+- **1 piste = 1 compteur** (installer autant de compteurs que de pistes existantes).
+- **Un meilleur positionnement et entretien des compteurs**.
 """
     )
