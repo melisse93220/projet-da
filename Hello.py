@@ -312,18 +312,21 @@ elif page == pages[4] :
     if st.checkbox(":red[**Afficher les valeurs aberrantes avant suppression**] "):
        st.image("boxplot1.jpg")
     
+    st.write("Nous avons utilisé un boxplot et calculé l'écart interquartile (IQR) des valeurs enregistrées par heure et par jour, pour détecter les valeurs aberrantes.")
+    st.write("Ainsi, nous avons constaté clairement la presence de valeurs extrêmes dans nos données. Elles sont exclusivement capturées par deux sites de comptage, à savoir le '**100003098**' et le '**100057380**'. Ces relevés exceptionnels ont été enregistrés entre juin 2023 et août 2023.")
     st.write(
     """
-    Nous avons pu expliquer certaines valeurs extrêmes observées entre Juin et Août 2023, mais nous avons également détecté des valeurs aberrantes qui nécessitaient une analyse plus approfondie.
-    - Au mois de juin, les valeurs extrêmes peuvent s'expliquer par l'évènement 'La Convergence' qui s'est déroulé à Paris le 11/06/2023.
-    - Au mois de juillet, il y avait la dernière étape du Tour de France qui s'est déroulée à Paris le 20/07/2023.
-    - Par contre, des valeurs aberrantes ont été enregistrées par les sites de comptage **'101003098' situé au 106 avenue Denfert Rochereau**, et **'100057380' positionné au niveau du Cours de la reine**. En effet, des valeurs anormalement élevées ont été observées entre juin 2023 et août 2023. Nous avons choisi de supprimer les valeurs aberrantes sur ces deux compteurs afin de ne pas fausser nos modélisations de prédiction de trafic étant donné que ces valeurs ne sont pas habituelles
+    Nous avons pu expliquer la raison de certaines valeurs extrêmes enregistrées, notamment :
+    - L'évènement exceptionnel, rassemblant plusieurs milliers de cyclistes pour promouvoir le vélo comme moyen de transport, qui s'est tenu à Paris le 11/06/2023.
+    - la dernière étape du Tour de France qui s'est déroulée à Paris le 20/07/2023.
     """
     )
     
-    st.write("Les valeurs extrêmes sont capturées exclusivement par 2 sites de comptage à savoir le **'100003098'** et le **'100057380'**. Ces relevés exceptionnels ont été enregistrées entre juin 2023 et août 2023.")
-    st.write("Afin de les repérer, nous avons calculé l'écart interquartile (IQR) des valeurs enregistrées par heure et par jour, et nous avons constaté des écarts significatifs entre celui-ci et les valeurs aberrantes. Nous avons choisi le **seuil de 500** pour isoler ces valeurs pour le site **'100003098'** et **3000 pour le site '100057380'**.")
-    
+    st.write("Cependant, malgré nos investigations, nous n'avons pu trouver d'explication pour les quelques valeurs aberrantes restantes. A titre d'exemple, une mesure effectuée le 21/08 à 5 heures du matin a affiché un nombre exceptionnellement élevé de 5349 passages, tout comme une autre observation inhabituelle à 15 heures le 22/08 avec exactement le même nombre !")
+    st.write("Pour la modélisation, nous avons décidé de les supprimer étant donné qu'elles ne sont pas représentatives du comportement habituel.")
+    st.write("Les seuils que nous avons choisi pour isoler ces valeurs aberrantes étaient de **500 pour le site '100003098' et 3000 pour le site '100057380'**.")
+    st.write("Ci-dessous, le boxplot après la suppression des valeurs aberrantes.")
+
     if st.checkbox(":red[**Afficher les valeurs aberrantes après suppression**] "):
        st.image("boxplot2.jpg")
     
@@ -417,7 +420,7 @@ elif page == pages[5] :
             table_html = '<table style="text-align:right;">'
             table_html += '<tr>'
             for col in df_metric.columns:
-                table_html += f'<th style="background-color: lightblue; padding: 10px;">{col}</th>'
+                table_html += f'<th style="background-color:  lightgray; padding: 10px;">{col}</th>'
             table_html += '</tr>'
 
             for _, row in df_metric.iterrows():
