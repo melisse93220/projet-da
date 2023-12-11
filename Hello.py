@@ -318,7 +318,7 @@ elif page == pages[4] :
     """
     Nous avons pu expliquer la raison de certaines valeurs extrêmes enregistrées, notamment :
     - L'évènement exceptionnel, rassemblant plusieurs milliers de cyclistes pour promouvoir le vélo comme moyen de transport, qui s'est tenu à Paris le 11/06/2023.
-    - la dernière étape du Tour de France qui s'est déroulée à Paris le 20/07/2023.
+    - La dernière étape du Tour de France qui s'est déroulée à Paris le 20/07/2023.
     """
     )
     
